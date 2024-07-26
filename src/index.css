@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+
+/* Sidebar Styling */
+.app{
+  font-family: "Inter", sans-serif;
+}
+
+.components{
+  height: 100vh;
+}
+
+.Sidebar{
+  width: 25%;
+  border: none;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  color: rgb(223, 222, 222);
+}
+
+.home{
+  padding: 1.2rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #131213;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.home:hover{
+  transition-duration: 0.5s;
+  color: white;
+}
+
+.home_icon, .stack_icon{
+  width: 1.5rem;
+  color: white;
+}
+
+.libraries{
+  padding: 0.6rem;
+  height: 100%;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #131213;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.lib_top_panel {
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lib {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.playlist{
+  width: 1rem;
+  border-radius: 50%;
+  margin: 0.7rem;
+  cursor: pointer;
+}
+
+.playlist:hover{
+  background-color: #262626;
+}
+
+.playlist_section{
+  background-color: #1c1c1c;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+
+.text_items{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.playlist_section p{
+  font-size: small;
+}
+
+.playlist_section button{
+  border: none;
+  border-radius: 1.1rem;
+  padding: 0.6rem 1rem ;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+/* Player Styling */
+
+.player{
+  height: 10%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+.song_details{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.song_image{
+  width: 3rem;
+  border-radius: 0.5rem;
+}
+
+.player_controls{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.btns{
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn_icons{
+  width: 0.2rem;
+}
