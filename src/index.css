@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -183,6 +187,7 @@ body{
   height: 0.3rem;
   border-radius: 1.5rem;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .seek_progress_bar{
@@ -190,7 +195,6 @@ body{
   width: 0%;
   height: 100%;
   background-color: #1DB954;
-  cursor: pointer;
 }
 
 .volume_bar{
@@ -215,6 +219,7 @@ body{
   border-radius: 0.5rem;
   margin-left: 0.5rem;
   padding: 0.5rem;
+  overflow: auto;
 }
 
 .navbar{
@@ -285,6 +290,7 @@ body{
   align-items: center;
   font-size: 1rem;
   gap: 1rem;
+  margin-left: 1rem;
 }
 
 .navbar_options p{
@@ -306,4 +312,41 @@ body{
   border-radius: 1rem;
   padding: 0.4rem 0.7rem;
   background-color: hsl(0deg 0% 100% / 10%);
+}
+
+.albums{
+  margin-top: 2rem;
+  color: white;
+}
+
+.album_container, .songs_container{
+  color: white;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.album_container:hover, .songs_container:hover{
+  background-color: #1C1D1D;
+}
+
+.album_cover, .song_cover{
+  width: 10rem;
+  border-radius: 0.5rem;
+}
+
+.album_desc, .song_desc{
+  font-size: 0.8rem;
+  text-align: center;
+  color: #A7A6A6;
+}
+
+.albums_list{
+  overflow: auto;
+  display: flex;
+  text-align: start;
 }
