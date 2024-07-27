@@ -279,3 +279,31 @@ body{
   height: 2rem;
   border-radius: 50%;
 }
+
+.navbar_options{
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  gap: 1rem;
+}
+
+.navbar_options p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.all_suggestions{
+  background-color: white;
+  width: 2.5rem;
+  border-radius: 1rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.music, .podcast{
+  color: white;
+  border-radius: 1rem;
+  padding: 0.4rem 0.7rem;
+  background-color: hsl(0deg 0% 100% / 10%);
+}
