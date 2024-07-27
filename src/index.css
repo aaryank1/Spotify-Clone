@@ -291,6 +291,7 @@ body{
   font-size: 1rem;
   gap: 1rem;
   margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .navbar_options p{
@@ -341,7 +342,7 @@ body{
 
 .album_desc, .song_desc{
   font-size: 0.8rem;
-  text-align: center;
+  /* text-align: center; */
   color: #A7A6A6;
 }
 
@@ -349,4 +350,111 @@ body{
   overflow: auto;
   display: flex;
   text-align: start;
+}
+
+.album_titles{
+  margin-left: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.album_data{
+  display: flex;
+  margin-top: 3rem;
+  margin-left: 1.4rem;
+  gap: 1.8rem;
+}
+
+.album_section_cover{
+  width: 13rem;
+  border-radius: 0.5rem;
+}
+
+.album_details{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.7rem;
+  color: white;
+}
+
+.album_title{
+  font-weight: 1000;
+  font-size: 5rem;
+}
+
+.spotify_logo{
+  width: 1.6rem;
+}
+
+.album_stats{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(0deg 0% 100% / 70%);
+}
+
+.album_stats b{
+  color: white;
+}
+
+.album_songs_list{
+  margin: 3rem 5rem 1rem 5rem;
+  padding: 1rem;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  border-bottom: 0.01rem solid #b3b3b3;
+}
+
+.title{
+  justify-self: start;
+}
+.album_names{
+  justify-self: center;
+}
+.clock_icon{
+  width: 1.4rem;
+  justify-self: end;
+}
+
+.song_data{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: center;
+  margin: 0rem 5rem;
+  margin-bottom: 0.3rem;
+  color: white;
+  row-gap: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.song_data:hover{
+  background-color: hsl(0deg 0% 100% / 10%);
+  border-radius: 0.5rem;
+}
+
+.serial_no{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  grid-column-start: 0;
+  grid-column-end: 2;
+}
+
+.song_cover_list{
+  width: 2.5rem;
+  border-radius: 0.3rem;
+}
+
+.album_data_name{
+  justify-self: center;
+}
+
+.album_song_duration{
+  justify-self: end;
 }

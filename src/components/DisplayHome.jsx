@@ -8,14 +8,19 @@ const DisplayHome = () => {
   return (
     <>
         <Navbar />
+        <div className="navbar_options">
+            <p className='all_suggestions'>All</p>
+            <p className='music'>Music</p>
+            <p className='podcast'>Podcast</p>
+        </div>
         <div className="albums">
-            <h1>Featured Charts</h1>
+            <h1 className='album_titles'>Featured Charts</h1>
             <div className="albums_list">
                 {albumsData.map((album, index)=> <AlbumItem key={index} name={album.name} desc={album.desc} img={album.image} id={album.id} />)}
             </div>
         </div>
         <div className="albums">
-            <h1>Todays Biggest Hits</h1>
+            <h1 className='album_titles'>Todays Biggest Hits</h1>
             <div className="albums_list">
                 {songsData.map((song, index)=> <SongItem key={index} name={song.name} desc={song.desc} id={index} img={song.image} />)}
             </div>
