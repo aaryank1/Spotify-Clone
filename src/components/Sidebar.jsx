@@ -1,11 +1,14 @@
 import React from 'react'
 import { assets } from "../assets/assets"
+import { useNavigate } from 'react-router-dom'
 
 
 const Sidebar = () => {
+    const navigate = useNavigate();
+    
   return (
     <div className='Sidebar'>
-        <div className='home'>
+        <div onClick={()=>navigate('/')} className='home'>
             <img className="home_icon" src={assets.home_icon} alt="home_icon" />
             <p>Home</p>
         </div>
