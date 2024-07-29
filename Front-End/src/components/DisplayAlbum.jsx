@@ -3,14 +3,24 @@ import Navbar from './Navbar'
 import { useParams } from 'react-router-dom'
 import { albumsData, assets, songsData } from '../assets/assets';
 import { PlayerContext } from '../Context/PlayerContext';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
-const DisplayAlbum = () => {
+const DisplayAlbum = ({album}) => {
 
     const {id} = useParams();
-    const albumData = albumsData[id];
-    const {playWithId} = useContext(PlayerContext)
+    const [albumData, setAlbumData] = useState("");
+    const {playWithId, albumsData, songsData} = useContext(PlayerContext);
 
-  return (
+    useEffect(() => {
+        albumsData.map((item) => {
+            if(item._id===id){
+                setAlbumData(item);
+            }
+        })
+    },[]);
+
+  return albumData ? (
     <>
         <Navbar />
         <div className="album_data">
@@ -35,8 +45,8 @@ const DisplayAlbum = () => {
             <img className='clock_icon' src={assets.clock_icon} alt="" />
         </div>
         {
-            songsData.map((song, index)=> (
-                <div onClick={()=>playWithId(song.id)} key={index} className="song_data">
+            songsData.filter((item)=> item.album === album.name).map((song, index)=> (
+                <div onClick={()=>playWithId(song._id)} key={index} className="song_data">
                     <p className='serial_no'>
                         <b style={{marginRight: "1rem"}}>{index+1}</b>
                         <img className="song_cover_list" src={song.image} alt="" />
@@ -48,7 +58,7 @@ const DisplayAlbum = () => {
             ))
         }
     </>
-  )
+  ) : null
 }
 
 export default DisplayAlbum

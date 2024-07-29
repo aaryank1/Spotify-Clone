@@ -6,17 +6,21 @@ import { PlayerContext } from './Context/PlayerContext'
 
 const App = () => {
 
-  const {audioRef,track} = useContext(PlayerContext);
+  const {audioRef,track, songsData} = useContext(PlayerContext);
 
   return (
     <div className="app">
-      <div className="components">
-        <Sidebar />
-        <Display />
+      {
+        songsData.length !==0 ? <>
+          <div className="components">
+            <Sidebar />
+            <Display />
+          </div>
+          <Player />
+        </>: null
+      }
+      <audio ref={audioRef} src={track?track.file:""} preload='auto'></audio>
       </div>
-      <Player />
-      <audio ref={audioRef} src={track.file} preload='auto'></audio>
-    </div>
   )
 }
 

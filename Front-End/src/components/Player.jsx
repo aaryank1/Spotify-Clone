@@ -6,7 +6,7 @@ const Player = () => {
 
     const {seekBg, seekBar, playStatus, play, pause, track, setTrack, time, previous, next, seekSong} = useContext(PlayerContext);
 
-  return (
+  return track ? (
     <div className='player'>
         <div className="song_details">
             <img className='song_image' src={track.image} alt="" />
@@ -51,7 +51,7 @@ const Player = () => {
             <img className='btn_icons' src={assets.zoom_icon} alt="" />
         </div>
     </div>
-  )
+  ) :null
 }
 
 export default Player
